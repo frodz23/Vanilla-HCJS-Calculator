@@ -23,7 +23,6 @@ body {
     margin: 10px auto;
     text-align: right;
     font-size: 4vw;
-    direction: rtl;
     overflow: hidden;
 }
 
@@ -53,6 +52,7 @@ body {
 
 button:hover {
     opacity: 0.4;
+    border-left: 1px solid white;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
 }

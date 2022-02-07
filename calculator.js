@@ -9,7 +9,6 @@ function display(value) {
 function clearDisplay() {
     let displayDiv = document.getElementById("display");
     displayValue = "";
-    console.log(displayValue)
     displayDiv.innerHTML = displayValue;
 }
 
@@ -21,6 +20,14 @@ function deleteLastChar() {
 
 function calculateDisplay() {
     let displayDiv = document.getElementById("display");
-    displayValue = "";
-    displayDiv.innerHTML = "Error";
+    
+    let convertedDisplayValue = displayValue.replace("x", "*");
+    try {
+        displayValue = eval(convertedDisplayValue);
+        displayDiv.innerHTML = displayValue;
+    }
+    catch {
+        displayValue = "";
+        displayDiv.innerHTML = "Error";
+    }
 }
